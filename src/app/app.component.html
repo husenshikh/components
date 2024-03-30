@@ -1,0 +1,114 @@
+<h1 class="bg-warning p-4">ANGULAR 14</h1>
+
+
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-product></app-product>
+    </div>
+    <div class="col-12">
+      <app-player></app-player>
+    </div>
+    <div class="col-12">
+      <ul class="list-group">
+        <li class="list-group-item bg-success text-white" *ngFor="let skill of skills">
+          I love {{skill}}
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item bg-danger text-white" *ngFor="let playre of players">
+           {{playre}} is Best Cricket Player.
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item bg-info text-white" *ngFor="let actor of actors">
+          Bollywood Best Actor is {{actor}}.
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item bg-warning" *ngFor="let company of companies ">
+          Best LapTop Company is {{company}}
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-group">
+        <li class="list-group-item bg-primary text-white" *ngFor="let car of cars">
+            India's Best Car is {{car}}
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div class="col-12">
+      <table class="table table-border">
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let std of stdArr; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <div class="col-12">
+      <table class="table table-border bg-danger text-white">
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Team</th>
+            <th>Bought (in crore)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of ipl; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{player.fname}}</td>
+            <td>{{player.lname}}</td>
+            <td>{{player.team}}</td>
+            <td>{{player.bought}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <div class="col-12">
+      <table class="table table-border bg-success text-white">
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>Car Name</th>
+            <th>Company Name</th>
+            <th>Price(in lakh)</th>
+            <th>fule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of car; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{car.carName}}</td>
+            <td>{{car.company}}</td>
+            <td>{{car.price}}</td>
+            <td>{{car.fule}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
